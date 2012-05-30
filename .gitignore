@@ -13,5 +13,4 @@
 *.c.d
 *.s.d
 #do not check in eclipse project files
-.cproject
 .settings/
