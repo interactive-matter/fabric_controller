@@ -35,7 +35,7 @@
 //#define HEX_INDOOR_16x32_MBI5030
 //#define SINGLE_OUTDOOR_16x16_MBI5026
 //#define SINGLE_INDOOR_16x32_MBI5030C
-#define SINGLE_INDOOR_16x16_MBI5031
+#define THE_FABRIC
 //#define TILE_OTHER
 
 #ifdef TILE_OTHER
@@ -108,6 +108,12 @@
   #define MBI5031
 #endif
 
+#ifdef THE_FABRIC
+  #define INDOOR_16x16
+  #define FABRIC
+  #define MBI5031
+#endif
+
 #ifdef QUAD_INDOOR_16x32_MBI5030
   #define INDOOR_16x32
   #define QUAD
@@ -144,7 +150,7 @@
 #ifdef INDOOR_16x16
 #define SCAN_RATE                             (16)
 #define MODULE_WIDTH                         (16)
-#define MODULE_HEIGHT                        (16)
+#define MODULE_HEIGHT                        (8)
 #define CHAIN_LENGTH                          (16)
 #define CHAIN_LOOPBACK_X                      (1)
 #define CHAIN_LOOPBACK_Y                      (1)
@@ -163,6 +169,12 @@
 #define NUM_MODULES_X                         (1)
 #define NUM_MODULES_Y                         (1)
 #endif
+
+#ifdef FABRIC
+#define NUM_MODULES_X                         (8)
+#define NUM_MODULES_Y                         (2)
+#endif
+
 
 #ifdef QUAD
 #define NUM_MODULES_X                         (2)
